@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="description"
+        content="HW Saver - Your trusted academic success partner. Expert tutoring in Mathematics, Engineering, Science, and more. Join 450+ US University students achieving academic excellence."
+      />
+      <meta
+        name="keywords"
+        content="academic help, tutoring, mathematics tutoring, engineering tutoring, science tutoring, university tutoring, homework help"
+      />
+      <meta name="author" content="HW Saver LLP" />
+      <title>HW Saver - Your Academic Success Journey Starts Here</title>
+      <!-- Updated Font Import -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+      <!--------------------------------------------------------------------------------------->
+      <!-- Scripts Loading Navigation Bar -->
+      <script>
+        // Function to load and inject the navbar
+        function loadNavbar() {
+          fetch("navbar.html")
+            .then((response) => response.text())
+            .then((data) => {
+              // Create a temporary container
+              const temp = document.createElement("div");
+              temp.innerHTML = data;
+
+              // Find the first nav element
+              const navbar = temp.querySelector("nav");
+
+              // Insert at the beginning of the body
+              document.body.insertAdjacentElement("afterbegin", navbar);
+            });
+        }
+
+        // Load navbar when the page loads
+        document.addEventListener("DOMContentLoaded", loadNavbar);
+        function loadFooter() {
+          fetch("footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              const temp = document.createElement("div");
+              temp.innerHTML = data;
+              const footer = temp.querySelector("footer");
+              document.body.appendChild(footer);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadFooter);
+      </script>
+
+      <!--------------------------------------------------------------------------------------->
+      <!-- Hero Section -->
+
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Your Academic Success Journey Starts Here</h1>
+          <p class="hero-tagline">
+            Trusted by 450+ US University students for academic excellence
+          </p>
+          <div class="achievement-grid">
+            <div class="achievement-card">
+              <span class="achievement-number">10,000+</span>
+              <span class="achievement-label">Teaching Hours</span>
+            </div>
+            <div class="achievement-card">
+              <span class="achievement-number">83%</span>
+              <span class="achievement-label">Retention Rate</span>
+            </div>
+            <div class="achievement-card">
+              <span class="achievement-number">30+</span>
+              <span class="achievement-label">Subject Experts</span>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="#subjects" class="btn">Explore Subjects</a>
+            <a href="contactUs.html" class="btn btn-outline"
+              >Get Academic Help</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--------------------------------------------------------------------------------------->
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="container">
+          <p class="about-text">
+            At HW Saver, we understand that academic life can be challenging.
+            Our team of qualified experts is here to boost your grades and
+            confidence with personalized academic support.
+          </p>
+        </div>
+      </section>
+
+      <main class="container">
+        <section id="subjects" class="subjects-section">
+          <h2>Expert Help Across Subjects</h2>
+          <div class="subjects-grid">
+            <div class="subject-card">
+              <div class="subject-icon">📐</div>
+              <h3>Mathematics</h3>
+              <p>
+                From calculus to statistics, our experts make complex concepts
+                clear.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">⚡</div>
+              <h3>Electrical Engineering</h3>
+              <p>
+                Expert guidance in circuits, electronics, and power systems.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">⚙️</div>
+              <h3>Mechanical Engineering</h3>
+              <p>
+                Comprehensive support in mechanics, thermodynamics, and design.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">🧪</div>
+              <h3>Chemistry</h3>
+              <p>
+                Mastering organic, inorganic, and physical chemistry concepts.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">⚛️</div>
+              <h3>Physics</h3>
+              <p>
+                Clear explanations of mechanics, electromagnetics, and modern
+                physics.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">📊</div>
+              <h3>Economics</h3>
+              <p>Understanding micro, macro, and econometric principles.</p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">💹</div>
+              <h3>Finance</h3>
+              <p>
+                Expert help in corporate finance, investments, and financial
+                analysis.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">📝</div>
+              <h3>English</h3>
+              <p>
+                Professional assistance with composition, literature, and
+                academic writing.
+              </p>
+            </div>
+            <div class="subject-card">
+              <div class="subject-icon">🎯</div>
+              <h3>Other Subjects</h3>
+              <p>
+                Specialized support across various undergraduate disciplines.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--------------------------------------------------------------------------------------->
+        <!-- How it works -->
+        <section class="how-it-works-section">
+          <div class="container">
+            <h2>How It Works</h2>
+            <div class="process-grid">
+              <div class="process-card">
+                <div class="process-icon">📅</div>
+                <div class="process-number">01</div>
+                <h3>Schedule Your Success</h3>
+                <p>
+                  Choose your preferred class timing and select from our expert
+                  tutors based on your specific needs and subject requirements.
+                </p>
+              </div>
+
+              <div class="process-card">
+                <div class="process-icon">🎓</div>
+                <div class="process-number">02</div>
+                <h3>Personalized Learning</h3>
+                <p>
+                  Experience in-depth coverage of core concepts at your own pace
+                  with our patient and knowledgeable tutors.
+                </p>
+              </div>
+
+              <div class="process-card">
+                <div class="process-icon">🎯</div>
+                <div class="process-number">03</div>
+                <h3>Achieve Your Goals</h3>
+                <p>
+                  Watch your grades improve as you master your subjects. Our
+                  success is measured by your academic achievements.
+                </p>
+              </div>
+
+              <div class="process-card">
+                <div class="process-icon">🌟</div>
+                <div class="process-number">04</div>
+                <h3>Join Our Community</h3>
+                <p>
+                  Become part of our growing academic community. Share your
+                  success with friends while we continue expanding our network
+                  of expert tutors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--------------------------------------------------------------------------------------->
+        <!-- Footer Section Pending -->
+      </main>
+    </body>
+  </html>
+</html>

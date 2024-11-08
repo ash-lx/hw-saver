@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get expert academic help from HW Saver. Connect with our qualified tutors for personalized support in Mathematics, Engineering, Science, and more subjects."
+    />
+    <meta
+      name="keywords"
+      content="academic help, tutoring services, homework help, contact tutors, academic support"
+    />
+    <meta name="author" content="HW Saver LLP" />
+    <title>Get Academic Help - Contact HW Saver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--------------------------------------------------------------------------------------->
+    <!-- Scripts Loading Navigation Bar -->
+    <script>
+      // Function to load and inject the navbar
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            // Create a temporary container
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+
+            // Find the first nav element
+            const navbar = temp.querySelector("nav");
+
+            // Insert at the beginning of the body
+            document.body.insertAdjacentElement("afterbegin", navbar);
+          });
+      }
+
+      // Load navbar when the page loads
+      document.addEventListener("DOMContentLoaded", loadNavbar);
+      function loadFooter() {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+            const footer = temp.querySelector("footer");
+            document.body.appendChild(footer);
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", loadFooter);
+    </script>
+
+    <main class="container">
+      <div class="container" role="main">
+        <section class="contact-section">
+          <h2 class="text-center mb-4">Get in Touch</h2>
+          <p class="text-center mb-5">
+            Fill out the form below and we'll get back to you as soon as
+            possible.
+          </p>
+
+          <div class="google-form-container">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeJJaXv4ejZpbaJH5WA3eSUpvuT7Ttfab2ppF0ic2xTW9lNlA/viewform?embedded=true"
+              width="100%"
+              height="1800"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Contact Form"
+              class="contact-form-iframe"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

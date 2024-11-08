@@ -1,0 +1,92 @@
+<!-- privacy.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - HW Saver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container" style="padding: 4rem 0">
+      <h1 class="mb-4">Privacy Policy</h1>
+
+      <section class="mb-5">
+        <h2>1. Information We Collect</h2>
+        <p>At HW Saver LLP, we collect the following types of information:</p>
+        <ul>
+          <li>Contact information (name, email, phone number)</li>
+          <li>Academic information (course details, assignments)</li>
+          <li>
+            Payment information (processed through secure third-party providers)
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-5">
+        <h2>2. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+          <li>Provide academic assistance services</li>
+          <li>Communicate about your assignments</li>
+          <li>Process payments</li>
+          <li>Improve our services</li>
+        </ul>
+      </section>
+
+      <section class="mb-5">
+        <h2>3. Information Security</h2>
+        <p>
+          We implement appropriate security measures to protect your personal
+          information. This includes:
+        </p>
+        <ul>
+          <li>Encryption of sensitive data</li>
+          <li>Secure server infrastructure</li>
+          <li>Regular security audits</li>
+        </ul>
+      </section>
+
+      <section class="mb-5">
+        <h2>4. Contact Us</h2>
+        <p>
+          If you have any questions about our privacy policy, please contact us
+          at:
+        </p>
+        <p>Email: ashlx@hwsaver.com</p>
+      </section>
+    </main>
+
+    <!-- Scripts Loading Navigation Bar and Footer -->
+    <script>
+      // Function to load and inject the navbar
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            // Create a temporary container
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+            // Find the first nav element
+            const navbar = temp.querySelector("nav");
+            // Insert at the beginning of the body
+            document.body.insertAdjacentElement("afterbegin", navbar);
+          });
+      }
+      // Load navbar when the page loads
+      document.addEventListener("DOMContentLoaded", loadNavbar);
+
+      function loadFooter() {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+            const footer = temp.querySelector("footer");
+            document.body.appendChild(footer);
+          });
+      }
+      document.addEventListener("DOMContentLoaded", loadFooter);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore educational YouTube channels featuring math, science, and finance content. Watch tutorials on geometry, probability, economics, and more from our expert creators."
+    />
+    <meta
+      name="keywords"
+      content="educational videos, math tutorials, science videos, finance education, YouTube learning, academic content"
+    />
+    <meta name="author" content="HW Saver LLP" />
+    <title>Fun Educational Projects - HW Saver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--------------------------------------------------------------------------------------->
+    <!-- Scripts Loading Navigation Bar -->
+    <script>
+      // Function to load and inject the navbar
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            // Create a temporary container
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+
+            // Find the first nav element
+            const navbar = temp.querySelector("nav");
+
+            // Insert at the beginning of the body
+            document.body.insertAdjacentElement("afterbegin", navbar);
+          });
+      }
+      document.addEventListener("DOMContentLoaded", loadNavbar);
+      // Footer section
+      function loadFooter() {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            const temp = document.createElement("div");
+            temp.innerHTML = data;
+            const footer = temp.querySelector("footer");
+            document.body.appendChild(footer);
+          });
+      }
+      document.addEventListener("DOMContentLoaded", loadFooter);
+    </script>
+    <!--------------------------------------------------------------------------------------->
+    <!-- YouTube Channels Section -->
+    <section class="youtube-showcase">
+      <div class="container">
+        <h2 class="section-title">Fun Educational Projects</h2>
+        <div class="channels-grid">
+          <!-- Abstract Away Channel -->
+          <div class="channel-section">
+            <div class="channel-header">
+              <div class="channel-info">
+                <img
+                  src="images/abstractAway.jpg"
+                  alt="Abstract Away Logo"
+                  class="channel-avatar"
+                />
+                <h3 class="channel-name">Abstract Away</h3>
+              </div>
+              <a
+                href="https://www.youtube.com/@abstractaway5656"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="subscribe-btn"
+                >Subscribe</a
+              >
+            </div>
+            <div class="videos-grid">
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/bTv4cEfA5Ls"
+                    title="Geometry of The Great Pyramid"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Geometry of The Great Pyramid || The Mathematics Of Pyramids
+                  Of Egypt
+                </h4>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/_NAC29JdRp0"
+                    title="Magic Of Nature"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Magic Of Nature Explained Through Math || Fibonacci Sequence
+                </h4>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/_dj8l5Ex_3k"
+                    title="Sky After Sunset"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Sky After Sunset || A Voyage To The Night Sky
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concept Boy Channel -->
+          <div class="channel-section">
+            <div class="channel-header">
+              <div class="channel-info">
+                <img
+                  src="images/conceptBoy.jpg"
+                  alt="Concept Boy Logo"
+                  class="channel-avatar"
+                />
+                <h3 class="channel-name">Concept Boy</h3>
+              </div>
+              <a
+                href="https://www.youtube.com/@conceptboy5091"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="subscribe-btn"
+                >Subscribe</a
+              >
+            </div>
+            <div class="videos-grid">
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/-3DHh5Y5N2w"
+                    title="Probability Introduction"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Probability - An Introduction || Teach Me Like This || Ep. 0
+                </h4>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/mZ6dDS7txbU"
+                    title="What is Probability"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Probability - What is Probability || Teach Me Like This || Ep.
+                  1
+                </h4>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/JYNXznvOU1s"
+                    title="Random Experiments"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Probability - Random Experiments & Sample Space || Ep. 2
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- FinFueled Channel -->
+          <div class="channel-section">
+            <div class="channel-header">
+              <div class="channel-info">
+                <img
+                  src="images/finfueled.jpg"
+                  alt="FinFueled Logo"
+                  class="channel-avatar"
+                />
+                <h3 class="channel-name">FinFueled</h3>
+              </div>
+              <a
+                href="https://www.youtube.com/@finfueled295"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="subscribe-btn"
+                >Subscribe</a
+              >
+            </div>
+            <div class="videos-grid">
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/O6JukDtG4wk"
+                    title="COVID-19 Impact"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  How did COVID-19 affect our lives? || Impact on Global
+                  Economies
+                </h4>
+              </div>
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/HpysfCg7m7E"
+                    title="Changing World Economy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <h4 class="video-title">
+                  Changing world and the economy || Emerging Economies
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
