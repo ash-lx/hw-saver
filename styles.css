@@ -110,7 +110,7 @@ body {
   background-color: var(--color-white);
   position: relative;
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
 }
 
 .hero::after {
@@ -134,34 +134,34 @@ body {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   color: #1f2937;
   line-height: 1.2;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: var(--color-primary);
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
 }
 
 .achievement-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+  margin: clamp(2rem, 4vw, 3rem) 0;
 }
 
 .achievement-card {
   background: rgba(37, 99, 235, 0.03);
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -172,7 +172,7 @@ body {
 
 .achievement-number {
   display: block;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
@@ -182,6 +182,20 @@ body {
   display: block;
   color: #4b5563;
   font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  justify-content: center;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 /* ---------------------------------------------------------------------- */
@@ -504,6 +518,46 @@ body {
 
   .section-title {
     font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+  
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+  
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* ---------------------------------------------------------------------- */
